@@ -1,0 +1,16 @@
+<html>
+<head>
+   <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<p>HELLO!!</P>
+   <script>
+   const socket=io.connect("ws://localhost:3001");
+   socket.on("msg",(data)=>{
+    p=document.createElement("p")
+    p.innerText=(data)
+    document.body.append(p)
+   });
+   </script>
+</body>
+</html>
